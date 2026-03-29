@@ -13,7 +13,7 @@ jobs:
         run: echo "hello-world"    
   demo-jobs2:
     needs: demo-jobs
-    runs-on: ubuntu-latest    
+    runs-on: self-hosted   
     steps:
       - name: checkout
         uses: actions/checkout@v4
