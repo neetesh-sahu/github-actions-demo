@@ -9,6 +9,10 @@ jobs:
     steps:
       - name: print hello-world
         run: echo "hello-world"    
+  demo-jobs2:
+    needs: demo-jobs
+    runs-on: ubuntu-latest    
+    steps:
       - name: check os
         run: |
           uname -a
