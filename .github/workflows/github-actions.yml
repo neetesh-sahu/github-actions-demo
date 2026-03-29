@@ -7,12 +7,16 @@ jobs:
   demo-jobs:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
       - name: print hello-world
         run: echo "hello-world"    
   demo-jobs2:
     needs: demo-jobs
     runs-on: ubuntu-latest    
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
       - name: check os
         run: |
           uname -a
