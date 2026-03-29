@@ -9,3 +9,15 @@ jobs:
     steps:
       - name: print hello-world
         run: echo "hello-world"    
+      - name: check os
+        run: |
+          uname -a
+          whoami
+
+      - name: create a file
+        run: |
+          echo "this file was created in action" > demo.txt
+          ls -l
+      - name: read the file
+        run: |
+          cat demo.txt        
