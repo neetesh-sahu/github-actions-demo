@@ -24,7 +24,7 @@ jobs:
 
       - name: create a file
         run: |
-          echo "this file was created in action" > demo.txt
+          echo "this file was created in action2" > demo.txt
           ls -l
       - name: read the file
         run: |
