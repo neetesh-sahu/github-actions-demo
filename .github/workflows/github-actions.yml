@@ -1,7 +1,7 @@
 name: first workflow
 on:
   push:
-    branchs:
+    branches:
       - main
 env:
   MY_NAME: neetesh      
@@ -14,10 +14,10 @@ jobs:
       
       - name: checkout
         uses: actions/checkout@v4
-      - name: env
-        env:
-          MY_JOB: devops engineer
+      
       - name: who are you?
+        env:
+          MY_JOB: Devops Engineer
         run: |
           echo "Im $MY_NAME and im from $FROM im a $MY_JOB"    
   demo-jobs2:
