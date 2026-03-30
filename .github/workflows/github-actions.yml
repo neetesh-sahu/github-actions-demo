@@ -4,7 +4,7 @@ on:
     branchs:
       - main
 env:
-  my-name: neetesh      
+  my_name: neetesh      
 jobs:
   demo-jobs:
     runs-on: ubuntu-latest
@@ -13,11 +13,11 @@ jobs:
     steps:
       - name: env
         env:
-          my-job: devops engineer
+          my_job: devops engineer
       - name: checkout
         uses: actions/checkout@v4
       - name: who are you?
-        run: echo "Im $my-name and im from $from im a $my-job"    
+        run: echo "Im $my_name and im from $from im a $my_job"    
   demo-jobs2:
     needs: demo-jobs
     runs-on: self-hosted   
