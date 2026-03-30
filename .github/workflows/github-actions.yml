@@ -11,11 +11,12 @@ jobs:
     env:
       from: indore
     steps:
+      
+      - name: checkout
+        uses: actions/checkout@v4
       - name: env
         env:
           my_job: devops engineer
-      - name: checkout
-        uses: actions/checkout@v4
       - name: who are you?
         run: echo "Im $my_name and im from $from im a $my_job"    
   demo-jobs2:
