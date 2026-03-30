@@ -19,7 +19,7 @@ jobs:
         env:
           MY_JOB: Devops Engineer
         run: |
-          echo "Im $MY_NAME and im from $FROM im a $MY_JOB"    
+          echo "Im $MY_NAME and im from $FROM  a $MY_JOB"    
   demo-jobs2:
     needs: demo-jobs
     runs-on: self-hosted   
