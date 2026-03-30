@@ -33,7 +33,7 @@ jobs:
 
       - name: create a file
         run: |
-          echo "this file was created action2 $my-name" > demo.txt
+          echo "this file was created action2 ffv $my-name" > demo.txt
           ls -l
       - name: read the file 
         run: |
