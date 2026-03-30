@@ -4,22 +4,22 @@ on:
     branchs:
       - main
 env:
-  my_name: neetesh      
+  MY_NAME: neetesh      
 jobs:
   demo-jobs:
     runs-on: ubuntu-latest
     env:
-      from: indore
+      FROM: indore
     steps:
       
       - name: checkout
         uses: actions/checkout@v4
       - name: env
         env:
-          my_job: devops engineer
+          MY_JOB: devops engineer
       - name: who are you?
         run: |
-          echo "Im $my_name and im from $from im a $my_job"    
+          echo "Im $MY_NAME and im from $FROM im a $MY_JOB"    
   demo-jobs2:
     needs: demo-jobs
     runs-on: self-hosted   
