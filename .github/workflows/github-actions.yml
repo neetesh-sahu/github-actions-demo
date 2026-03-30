@@ -7,7 +7,7 @@ env:
   MY_NAME: neetesh      
 jobs:
   demo-jobs:
-    runs-on: self-hosted-2
+    runs-on: self-hosted
     env:
       FROM: indore
     steps:
@@ -22,7 +22,7 @@ jobs:
           echo "Im $MY_NAME and im from $FROM  a $MY_JOB"    
   demo-jobs2:
     needs: demo-jobs
-    runs-on: self-hosted   
+    runs-on: self-hosted-2  
     steps:
       - name: checkout
         uses: actions/checkout@v4
