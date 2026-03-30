@@ -3,14 +3,21 @@ on:
   push:
     branchs:
       - main
+env:
+  my-name: neetesh      
 jobs:
   demo-jobs:
     runs-on: ubuntu-latest
+    env:
+      from: indore
     steps:
+      - name: env
+        env:
+          my-job: devops engineer
       - name: checkout
         uses: actions/checkout@v4
-      - name: print hello-world
-        run: echo "hello-world"    
+      - name: who are you?
+        run: echo "Im $my-name and im from $from im a $my-job"    
   demo-jobs2:
     needs: demo-jobs
     runs-on: self-hosted   
@@ -24,7 +31,7 @@ jobs:
 
       - name: create a file
         run: |
-          echo "this file was created in action2" > demo.txt
+          echo "this file was created in action2 $my-name" > demo.txt
           ls -l
       - name: read the file
         run: |
