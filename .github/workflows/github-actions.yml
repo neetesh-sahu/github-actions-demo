@@ -35,6 +35,23 @@ jobs:
         run: |
           echo "this file was created action2 dddeedffv $my-name" > demo.txt
           ls -l
+
+  demo-jobs3:
+    needs: demo-jobs2
+    runs-on: self-hosted-3  
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: check os
+        run: |
+          uname -a
+          whoami
+
+      - name: create a file
+        run: |
+          echo "this file was created action2 dddeedffv $my-name" > demo.txt
+          ls -l
+             
       - name: read the file 
         run: |
           cat demo.txt        
